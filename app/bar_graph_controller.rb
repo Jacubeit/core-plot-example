@@ -63,7 +63,7 @@ class BarGraphController < CPTGraphHostingView
       z.axisLineStyle   = nil
     end
 
-    ## usually its not DRY to initialize each lable seperately but to play around...
+    ## usually its not DRY to initialize each label seperately but to play around...
     label_1 = CPTAxisLabel.alloc.initWithText("foo", textStyle: x.labelTextStyle)
     label_1.tickLocation = CPTDecimalFromFloat(0.0)
     label_1.offset = 5.0
@@ -83,7 +83,7 @@ class BarGraphController < CPTGraphHostingView
     plotSpace.scaleToFitPlots [dummyPlot]
 
     ## This does not work ... seems that 'lenght' is the problem
-    # plotRange = CPTPlotRange.plotRangeWithLocation(CPTDecimalFromFloat(0.1), length:CPTDecimalFromFloat(3.0))
+    # plotRange = CPTMutablePlotRange.plotRangeWithLocation(CPTDecimalFromFloat(0.1), length:CPTDecimalFromFloat(3.0))
     # plotSpace.xRange =  plotRange
 
     plotSpace.allowsUserInteraction = true
